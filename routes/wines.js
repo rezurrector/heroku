@@ -4,8 +4,8 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('mongodb://heroku_app21484370:kdo59vg9ho0fid16jji95q18bs@ds027409.mongolab.com:27409/heroku_app21484370', 27017, {auto_reconnect: true});
-db = new Db('winedb', server, {safe: true});
+var server = new Server('mongodb://heroku_app21484370:kdo59vg9ho0fid16jji95q18bs@ds027409.mongolab.com', 27409, {auto_reconnect: true});
+db = new Db('heroku_app21484370', server, {safe: true});
 
 db.open(function(err, db) {
     if(!err) {
