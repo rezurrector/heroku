@@ -4,7 +4,7 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('mongodb://rezurrector:1683cairo@ds027409.mongolab.com:27409/heroku_app21484370', 27017, {auto_reconnect: true});
+var server = new Server('localhost', 27017, {auto_reconnect: true});
 db = new Db('winedb', server, {safe: true});
 
 db.open(function(err, db) {
